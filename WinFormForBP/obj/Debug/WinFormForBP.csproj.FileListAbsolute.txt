@@ -1,0 +1,15 @@
+C:\Users\zhangchongkai\Documents\Visual Studio 2015\Projects\WinFormForBP\WinFormForBP\bin\Debug\WinFormForBP.exe.config
+C:\Users\zhangchongkai\Documents\Visual Studio 2015\Projects\WinFormForBP\WinFormForBP\bin\Debug\WinFormForBP.exe
+C:\Users\zhangchongkai\Documents\Visual Studio 2015\Projects\WinFormForBP\WinFormForBP\bin\Debug\WinFormForBP.pdb
+C:\Users\zhangchongkai\Documents\Visual Studio 2015\Projects\WinFormForBP\WinFormForBP\bin\Debug\AForge.Controls.dll
+C:\Users\zhangchongkai\Documents\Visual Studio 2015\Projects\WinFormForBP\WinFormForBP\bin\Debug\AForge.dll
+C:\Users\zhangchongkai\Documents\Visual Studio 2015\Projects\WinFormForBP\WinFormForBP\bin\Debug\AForge.Neuro.dll
+C:\Users\zhangchongkai\Documents\Visual Studio 2015\Projects\WinFormForBP\WinFormForBP\obj\Debug\WinFormForBP.csproj.ResolveComReference.cache
+C:\Users\zhangchongkai\Documents\Visual Studio 2015\Projects\WinFormForBP\WinFormForBP\obj\Debug\WinFormForBP.Properties.Resources.resources
+C:\Users\zhangchongkai\Documents\Visual Studio 2015\Projects\WinFormForBP\WinFormForBP\obj\Debug\WinFormForBP.csproj.GenerateResource.Cache
+C:\Users\zhangchongkai\Documents\Visual Studio 2015\Projects\WinFormForBP\WinFormForBP\obj\Debug\WinFormForBP.exe
+C:\Users\zhangchongkai\Documents\Visual Studio 2015\Projects\WinFormForBP\WinFormForBP\obj\Debug\WinFormForBP.pdb
+C:\Users\zhangchongkai\Documents\Visual Studio 2015\Projects\WinFormForBP\WinFormForBP\obj\Debug\WinFormForBP.csprojResolveAssemblyReference.cache
+C:\Users\zhangchongkai\Documents\Visual Studio 2015\Projects\WinFormForBP\WinFormForBP\obj\Debug\WinFormForBP.SplashForm.resources
+C:\Users\zhangchongkai\Documents\Visual Studio 2015\Projects\WinFormForBP\WinFormForBP\obj\Debug\WinFormForBP.TrainImportForm.resources
+C:\Users\zhangchongkai\Documents\Visual Studio 2015\Projects\WinFormForBP\WinFormForBP\obj\Debug\WinFormForBP.ComputeForm.resources
