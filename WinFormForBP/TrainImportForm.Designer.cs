@@ -121,7 +121,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TrainImportForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TrainImportForm";
+            this.Text = "土质边坡安全系数快速预测系统";
             this.ResumeLayout(false);
             this.PerformLayout();
 

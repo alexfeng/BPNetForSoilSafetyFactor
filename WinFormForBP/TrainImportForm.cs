@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 using System.IO;
 
@@ -63,10 +64,43 @@ namespace WinFormForBP
             }
         }
 
+        private delegate void delegateCall();//这里定义一个委托
+        private void train()
+        {
+            double errorOut;
+            bool b = double.TryParse(textBox1.Text, out errorOut);
+            if (b)
+            {
+                double error = 10;
+                int iteration = 1;
+                while (error > errorOut)
+                {
+                    error = Program.teacher.RunEpoch(Program.trainInput_Data, Program.trainOutput_Data);
+                    this.listBox1.Invoke(new delegateCall(delegate
+                    {
+                        this.listBox1.Items.Add("第" + iteration.ToString() + "轮误差为" + error.ToString());
+                        this.listBox1.SelectedIndex = this.listBox1.Items.Count - 1;
+                    }));
+                    //this.listBox1.Items.Add("第" + iteration.ToString() + "轮误差为" + error.ToString());
+                    Console.WriteLine("第" + iteration.ToString() + "轮误差为" + error.ToString());
+                    iteration++;
+                }
+                Program.isTrained = true;
+                this.Invoke(new delegateCall(delegate {
+                    MessageBox.Show("训练完成！训练误差是" + error.ToString());
+                    ComputeForm compute = new ComputeForm();
+                    compute.Show();
+                }));
+            }
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             this.listBox1.Items.Clear();
             IterationRemoveItem(listBox1);
+            Thread thread = new Thread(new ThreadStart(train));//定义线程
+            thread.Start();//启动线程
+
+            /*
             double errorOut;
             bool b = double.TryParse(textBox1.Text,out errorOut);
             if (b)
@@ -77,7 +111,7 @@ namespace WinFormForBP
                 {
                     error = Program.teacher.RunEpoch(Program.trainInput_Data, Program.trainOutput_Data);
                     this.listBox1.Items.Add("第" + iteration.ToString() + "轮误差为" + error.ToString());
-                    //Console.WriteLine("第" + iteration.ToString() + "轮误差为" + error.ToString());
+                    Console.WriteLine("第" + iteration.ToString() + "轮误差为" + error.ToString());
                     iteration++;
                 }
                 Program.isTrained = true;
@@ -85,6 +119,7 @@ namespace WinFormForBP
                 ComputeForm compute = new ComputeForm();
                 compute.Show();
             }
+            */
         }
 
         private void IterationRemoveItem(ListBox listbox)
@@ -102,7 +137,7 @@ namespace WinFormForBP
 
         public void loadTrainData(string fileName)
         {
-            Program.inputParaCount = 10;
+            Program.inputParaCount = 11;
             Program.outputParaCount = 1;
             Program.hideParaCount = (int)Math.Floor(Math.Sqrt(Program.inputParaCount + Program.outputParaCount)) + 10;
             Program.max_Data = new double[Program.inputParaCount];
@@ -131,6 +166,7 @@ namespace WinFormForBP
                 for (int j = 0; j < Program.inputParaCount + Program.outputParaCount; j++)
                     Program.initData[i][j] = double.Parse(temp[j]);
             }
+            init_Data.Close();
 
             Program.trainNum_Data = Program.length_Data; // 训练数据
             Program.trainInput_Data = new double[Program.trainNum_Data][];
@@ -176,7 +212,7 @@ namespace WinFormForBP
                 if (Program.trainOutput_Data[i][0] < Program.min_T)
                     Program.min_T = Program.trainOutput_Data[i][0];
             }
-
+            reader_trainData.Close();
             // 归一化训练数据
             for (int i = 0; i < Program.trainNum_Data; i++)
             {

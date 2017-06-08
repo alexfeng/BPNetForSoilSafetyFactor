@@ -1,0 +1,8 @@
+C:\Users\zhangchongkai\Documents\Visual Studio 2015\Projects\WinFormForBP\WinFormForBP\bin\Release\WinFormForBP.exe.config
+C:\Users\zhangchongkai\Documents\Visual Studio 2015\Projects\WinFormForBP\WinFormForBP\obj\Release\WinFormForBP.csproj.ResolveComReference.cache
+C:\Users\zhangchongkai\Documents\Visual Studio 2015\Projects\WinFormForBP\WinFormForBP\obj\Release\WinFormForBP.ComputeForm.resources
+C:\Users\zhangchongkai\Documents\Visual Studio 2015\Projects\WinFormForBP\WinFormForBP\obj\Release\WinFormForBP.SplashForm.resources
+C:\Users\zhangchongkai\Documents\Visual Studio 2015\Projects\WinFormForBP\WinFormForBP\obj\Release\WinFormForBP.Properties.Resources.resources
+C:\Users\zhangchongkai\Documents\Visual Studio 2015\Projects\WinFormForBP\WinFormForBP\obj\Release\WinFormForBP.TrainImportForm.resources
+C:\Users\zhangchongkai\Documents\Visual Studio 2015\Projects\WinFormForBP\WinFormForBP\obj\Release\WinFormForBP.csproj.GenerateResource.Cache
+C:\Users\zhangchongkai\Documents\Visual Studio 2015\Projects\WinFormForBP\WinFormForBP\obj\Release\WinFormForBP.csprojResolveAssemblyReference.cache
